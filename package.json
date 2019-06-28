@@ -1,0 +1,19 @@
+{
+  "name": "minifox",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/octav47/minifox.git"
+  },
+  "author": "Kir Tribunsky",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/octav47/minifox/issues"
+  },
+  "homepage": "https://github.com/octav47/minifox#readme"
+}
