@@ -2,9 +2,12 @@
   "name": "minifox",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "lib/minifox.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && ./node_modules/.bin/rollup -c",
+    "watch": "npm run clean && ./node_modules/.bin/rollup -c -w"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/octav47/minifox/issues"
   },
-  "homepage": "https://github.com/octav47/minifox#readme"
+  "homepage": "https://github.com/octav47/minifox#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "rollup": "^1.16.4",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
 }
