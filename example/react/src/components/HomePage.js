@@ -1,18 +1,25 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react'
+import withConnection from '../../../../dist/react/esm/withConnection'
+import useMinifox from '../../../../dist/react/esm/useMinifox'
 
-const HomePage = () => {
-  return (
-    <div>
-      <h1>React Slingshot</h1>
+function Birds (props) {
+  const { moduleMap, dispatch } = useMinifox('moduleMap')
 
-      <h2>Get Started</h2>
-      <ol>
-        <li>Review the <Link to="/fuel-savings">demo app</Link></li>
-        <li>Remove the demo and start coding: npm run remove-demo</li>
-      </ol>
-    </div>
-  );
-};
+  console.log(moduleMap)
 
-export default HomePage;
+  return <div>
+    birds
+  </div>
+}
+
+class HomePage extends Component {
+  render () {
+    return (
+      <div>
+        <Birds />
+      </div>
+    )
+  }
+}
+
+export default HomePage

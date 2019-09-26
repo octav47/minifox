@@ -7,7 +7,7 @@ const reactPublicPath = path.resolve(__dirname, '../react/build')
 app.use('/', express.static(publicPath))
 app.use('/react', express.static(reactPublicPath))
 
-app.get('/minifox.js', (req, res) => res.sendFile(path.resolve('../../dist/minifox.js')))
+app.get('/minifox.js', (req, res) => res.sendFile(path.resolve('../../dist/minifox.umd.js')))
 
 // app.get('/react', (req, res) => res.sendFile(path.resolve(reactPublicPath)))
 

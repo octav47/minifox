@@ -2,7 +2,8 @@
   "name": "minifox",
   "version": "0.0.1",
   "description": "",
-  "main": "lib/minifox.js",
+  "main": "dist/minifox.js",
+  "browser": "dist/minifox.js",
   "scripts": {
     "start": "node server.js",
     "clean": "rm -rf dist",
@@ -22,9 +23,24 @@
   "devDependencies": {
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "parcel-bundler": "^1.12.3",
     "rollup": "^1.16.4",
     "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-local-resolve": "^1.0.7",
+    "rollup-plugin-multi-entry": "^2.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0"
+  },
+  "dependencies": {
+    "react": "^16.9.0",
+    "storeon": "^0.9.5"
+  },
+  "peerDependencies": {
+    "react": "16.9.0",
+    "react-dom": "16.9.0"
   }
 }

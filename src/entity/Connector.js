@@ -1,4 +1,5 @@
 import Connection from './Connection'
+import { store } from '../store'
 
 class Connector {
   constructor (config) {
@@ -11,7 +12,9 @@ class Connector {
 
     this.init(moduleName)
 
-    this.log('moduleMap')
+    store.dispatch('use-module', { name: moduleName, config })
+
+    console.log('store.get()', store.get())
 
     return new Connection()
   }

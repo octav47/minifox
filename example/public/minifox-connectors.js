@@ -1,4 +1,4 @@
-const { connector } = minifox()
+const { connector } = minifox
 
 const reactConnection = connector.use('react', {
   publicPath: '//localhost:3001',
